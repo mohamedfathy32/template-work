@@ -120,7 +120,7 @@ const Home = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-green-900/70 to-green-800/50" />
                 <div className="absolute inset-0 flex items-center justify-center text-center text-white px-4">
                   <div className="max-w-4xl">
-                    <h1 className="text-5xl md:text-7xl font-serif mb-6 animate-fade-in">
+                    <h1 className="text-5xl text-white md:text-7xl font-serif mb-6 animate-fade-in">
                       {slide.title}
                     </h1>
                     <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto animate-fade-in-delay">

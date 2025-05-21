@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { products } from '../data/products';
 
 const Products = () => {
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const categories = ['All', ...new Set(products.map(product => product.category))];
 
@@ -44,12 +46,14 @@ const Products = () => {
                   alt={product.title}
                   className="w-full h-full object-cover"
                 />
-
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-serif mb-2">{product.title}</h3>
                 <p className="text-gray-600 mb-4">{product.description}</p>
-                <button className="w-full bg-gray-900 text-white py-2 rounded-md hover:bg-gray-800 transition-colors duration-200">
+                <button 
+                  onClick={() => navigate(`/products/${product.id}`)}
+                  className="w-full bg-gray-900 text-white py-2 rounded-md hover:bg-gray-800 transition-colors duration-200"
+                >
                   View Details
                 </button>
               </div>

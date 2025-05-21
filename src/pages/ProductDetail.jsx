@@ -7,7 +7,7 @@ const ProductDetail = () => {
 
   if (!product) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen  py-16 bg-gray-50">
         <div className="text-center">
           <h2 className="text-2xl font-serif mb-4">Product Not Found</h2>
           <Link to="/products" className="btn btn-primary">
